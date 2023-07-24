@@ -1,0 +1,213 @@
+.display{
+  width: 95%;
+  min-height: 50vh;
+  margin: 25px auto;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  padding: 10px;
+}
+.search{
+  width: fit-content;
+  padding: 0px 50px;
+  min-height: 10vh;
+  margin: 25px auto;
+  display: flex;
+  border-radius: 5px;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 5px rgba(0,0,0,0.09), 0 6px 6px rgba(0,0,0,0.03);
+}
+.display .items{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.display .items .item-card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 370px;
+  margin: 30px 15px;
+  border-radius: 5px;
+  padding: 10px 15px;
+  box-shadow: 0 4px 3px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.13);
+  transition: 0.3s ease-in-out;
+}
+.display .items .item-card:hover{
+  transform: scale(1.05);
+}
+.display .items .item-card img{
+  width: 350px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.display .items .item-card .content{
+  width: 350px;
+  margin: auto;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #6e6d6d;
+}
+.display .items .item-card .item-name{
+  color: red;
+  font-family: cursive;
+  font-family: 'Kaushan Script', cursive;
+  font-size: 14px;
+  font-weight: 500;
+}
+.display .items .item-card .content p{
+  font-size: 14px;
+  font-weight: 500px;
+}
+.display .items .item-card .content .name{
+  display: flex;
+  align-items: center;
+}
+.display .items .item-card .content .name h5{
+  font-size: 13px;
+  font-weight: 400;
+  
+}
+.display .items .item-card .content .name h5 .bold{
+  font-size: 16px;
+  font-weight: 500;
+  color: blueviolet;
+}
+.display .items .item-card .contact h6{
+  font-size: 13px;
+  font-weight: 400;
+  margin-top: 10px;
+}
+.display .items .item-card .contact .bold{
+  color: blueviolet;
+  font-size: 14px;
+  font-weight: 500;
+}
+.display .items .item-card .content .name small{
+  font-size: 12px;
+  padding-left: 5px;
+  margin-bottom: 4px;
+}
+.display .items .item-card .content p{
+  margin-bottom: 5px;
+}
+.display .items .item-card .content  p .bold{
+  color: blueviolet;
+  font-size: 16px;
+  font-weight: 500;
+}
+.whats-app-icon{
+  border: 1px solid green;
+  color: green;
+}
+.whats-app-icon:hover{
+  color: #fff;
+  background-color: green;
+}
+.contact {
+  display: flex;
+  align-items: center;
+}
+.mail-icon{
+  border: 1px solid rgba(177, 10, 10, 0.753);
+  color: rgba(177, 10, 10, 0.753);
+}
+.mail-icon:hover{
+  color: #fff;
+  background-color: rgba(177, 10, 10, 0.753);
+}
+.user-icon{
+  border: 1px solid rgb(0, 60, 255);
+  color: rgb(0, 60, 255);
+}
+.user-icon:hover{
+  color: #fff;
+  background-color: rgb(0, 60, 255);
+}
+
+.contact #icn{
+  padding: 5px 6px;
+  font-size: 17px;
+  border-radius: 30px;
+  margin-left: 10px;
+}
+
+.search form{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* top: 10%; */
+}
+
+.error{
+  color: red;
+  font-size: 14px;
+  font-weight: 500;
+  padding-top: 10px;
+  border-radius: 2px;
+}
+.search form input{
+  width: 100%;
+  outline: none;
+  padding: 7px 15px;
+  padding-right: 100px;
+  border: 2px solid #f2f2f2;
+  background: transparent;
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #313030;
+}
+
+#btn{
+  display: flex;
+  padding: 5px 20px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  margin-left: 10px;
+  color: #fff;
+  font-weight: 500;
+  background: #000;
+  transition: 0.1s;
+}
+#btn:hover{
+  border-radius: 20px;
+}
+
+#resloved .item-card{
+  opacity: 0.6;
+}
+#resloved .item-card:hover{
+  background-color: rgb(253, 182, 182);
+  opacity: 1;
+}
+
+#resloved .item-card{
+  width: 40%;
+  display: flex;
+  max-height: 200px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+#resloved .item-card img{
+  width: 250px;
+  height: 140px;
+}
+#resloved .items .item-card{
+  max-height: 200px;
+}
+#resloved .items .item-card .content{
+  width: fit-content;
+  margin: auto;
+  margin-top: 0px;
+  border: 0px solid transparent;
+  border-left: 1px solid #6e6d6d;
+  padding-left: 10px;
+}
+center h2{
+  font-family: 'Kaushan Script', cursive;
+  color: blueviolet;
+}

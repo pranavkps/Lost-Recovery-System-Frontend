@@ -1,0 +1,95 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
+.signin{
+  width: 90%;
+  max-width: 450px;
+  margin: auto;
+  align-items: center;
+  margin-top: 3%;
+  justify-content: center;
+  padding: 30px;
+  padding-bottom: 5px;
+  border-radius: 10px;
+  box-shadow: 0 7px 13px rgba(0,0,0,0.22), 0 1px 2px rgba(0,0,0,0.34);
+}
+.signin div{
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+.signin div .icon{
+  color: #1A73E8;
+  color : #000;
+}
+.signin h3{
+  font-family: 'Kaushan Script', cursive;
+  padding-bottom: 20px;
+  font-weight: 600;
+  color: #1A73E8;
+  color: #000;
+}
+.signin div label{
+  font-size: 13px;
+  font-weight: 500;
+  color: #706e6e;
+  display: none;
+}
+.signin div input{
+  border-radius: 0px;
+  border: 0px solid #aaa4a4;
+  width: 100%;
+  border-bottom: 1px solid #706e6e;
+  outline: none;
+  font-size: 13px;
+  font-weight: 600;
+  color: #1B3A57;
+  padding : 5px 2px;
+  margin-left: 20px;
+}
+input .form-control:focus{
+  box-shadow: none;
+  outline: none;
+  border-bottom: 2px solid #706e6e;
+}
+.signin .btn{
+  border-radius: 2px;
+  width: fit-content;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 7px 35px;
+  color: #fff;
+  margin-top: 5px;
+  background-color: #000;
+  border: 0px solid transparent;
+  transition: 0.3s ;
+  cursor: pointer;
+}
+.signin .btn:hover{
+  border-radius: 30px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+}
+.signin #sub{
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+.signin #sub p{
+  font-size: 14px;
+  font-weight: 450;
+  margin-top: 10px;
+}
+.signin #sub p .Link{
+  padding-left: 5px;
+  font-size: 15px;
+}
+.signin .error{
+  color: red;
+  font-family: cursive;
+  font-size: 13px;
+  margin-top: 10px;
+  font-weight: 550;
+  font-weight: 14px;
+}
