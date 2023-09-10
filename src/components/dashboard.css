@@ -1,6 +1,6 @@
 .posted-items .item-card{
   width: 40%;
-  min-height: 15vh;
+  /* min-height: 15vh; */
   margin: 20px auto;
   align-items: center;
   justify-content: space-evenly;
@@ -86,4 +86,23 @@ center h2{
 #resolve img{
   width: 200px;
   height: 100px;
+}
+small{
+  color: red;
+  font-size: 12px;
+  font-weight:500;
+}
+.item-name{
+  font-size: 18px;
+}
+.item-name #icn{
+  margin-left: 20px;
+  font-size: 15px;
+  color: #313030;
+  margin-top: -12px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.item-name #icn:hover{
+  color: red;
 }

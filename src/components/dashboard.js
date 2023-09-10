@@ -2,6 +2,8 @@ import axios from "axios";
 import React,{useEffect, useState} from "react";
 import moment from 'moment';
 import './dashboard.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEdit, faTrash } from '@fortawesome/free-solid-svg-icons';
 
 const Dashboard = ()=>{
 
@@ -20,6 +22,18 @@ const Dashboard = ()=>{
   const handleInputChange = (e) => {
     setResolveText(e.target.value);
   };
+
+  const del = async(image)=>{
+    setid(image);
+    const item = id.id;
+    try{
+      await axios.delete(`http://localhost:5000/delete-item/${item}`);
+      alert("Your Post Deleted Successfully");
+    }
+    catch(err){
+      console.log(err);
+    }
+  }
 
   useEffect(() => {
     fetchImages();
@@ -77,10 +91,14 @@ const Dashboard = ()=>{
             <div key={image._id} className="item-card">
               <img src={`http://localhost:5000/${image.imagePath}`} alt={image.place} />
               <div>
+                <small className='item-name'>{image.itemName} 
+                  <FontAwesomeIcon icon={faTrash} id="icn" onClick={() => del(image)}/>
+                </small> 
                 <p>Found Place <b className='bold'>{image.place}</b></p>
                 <p>Updated At <b className='bold'>{moment(image.updated_at).format('MMMM Do YYYY')}</b></p>
               </div>
               <button onClick={() => resolve(image)}>Resolve</button>
+              {/* <button onClick={() => resolve(image)}>Delete</button> */}
             </div>
           ))}
         </div>
@@ -95,9 +113,13 @@ const Dashboard = ()=>{
             <div key={image._id} className="item-card">
               <img src={`http://localhost:5000/${image.imagePath}`} alt={image.place} />
               <div>
+                <small className='item-name'>{image.itemName} 
+                  <FontAwesomeIcon icon={faEdit} onClick={() => resolve(image)} id="icn"/>
+                  <FontAwesomeIcon icon={faTrash} id="icn" onClick={() => del(image)}/>
+                </small>
                 <p>Issued to <b className='bold'>{image.issued_to}</b></p>
                 <p>Updated At <b className='bold'>{moment(image.updatedAt).format('MMMM Do YYYY')}</b></p>
-                <br></br>
+                
                 <p>Found Place <b className='bold'>{image.place}</b></p>
                 <p>Created At <b className='bold'>{moment(image.createdAt).format('MMMM Do YYYY')}</b></p>
               </div>

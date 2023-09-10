@@ -162,18 +162,25 @@ const Home = ()=>{
             .filter(image => image.status === "approved")
             .map((image) => (
               <div key={image._id} className="item-card">
+                <div>
                 <img src={`http://localhost:5000/${image.imagePath}`} alt={image.place} />
+                </div>
                 <div className='content'>
+                  <small className='item-name'>{image.itemName}</small>
                   <p>Issued To <b className='bold'>{image.issued_to}</b></p>
                   <p>Updated At <b className='bold'>{moment(image.updatedAt).format('MMMM Do YYYY')}</b></p>
-                  <p>Found Place <b className='bold'>{image.place}</b></p>
-                  <div className='name'> 
-                    <h5>Posted by <b className='bold'>{image.name}</b></h5> <small>({image.identity})</small>
-                  </div>
-                  <div className='name'>
-                    <h5>Contact <b className='bold'>{image.phone}</b></h5>
-                  </div>
                 </div>
+                  <div className='content'> 
+                  <p>Found Place <b className='bold'>{image.place}</b></p>
+                    <p>Posted by <b className='bold'>{image.name}</b> <small>({image.identity})</small></p>
+                  {/* </div>
+                  <div className='name content'> */}
+                    <p>Contact <b className='bold'>{image.phone}</b></p>
+                  </div>
+                  <div className='name contact' id='icon'>
+                    <FontAwesomeIcon icon={faWhatsapp} className='whats-app-icon' id='icn' onClick={()=>sendMessage(image)}/>
+                    <FontAwesomeIcon icon={faUser} className='user-icon' id='icn'/>
+                  </div>
               </div>
             ))}
             </div>
